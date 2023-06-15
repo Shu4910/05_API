@@ -22,7 +22,7 @@
   <button id="getLocationButton">現在地から取得して入力する</button>
   <br>
   <p>郵便番号を入力して、住所を取得する</div></p>
-  <form>
+  <form id="centerForm">
     <table>
         <tbody>
             <tr>
@@ -77,6 +77,7 @@
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
 <script src="keys/firebase.js"></script>
 
+
 <script>
 // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -92,6 +93,13 @@ function saveToFirebase() {
   const street = document.getElementById('address4').value;
   const apartment = document.getElementById('address5').value;
   const name = document.getElementById('address6').value;
+
+
+      // Check if zipcode is empty
+      if (!zipcode || !prefecture || !city || !town || !street || !apartment || !name) {
+        alert("空欄の項目があります！森田激おこぷんぷん丸です😡");
+        return;
+    }
 
   // Reference to your Firebase database
   var dbRef = firebase.database().ref();

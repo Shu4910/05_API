@@ -42,7 +42,10 @@ window.onload = function() {
 
                 document.getElementById("input").value = postal_code;
                 document.getElementById("address1").value = administrative_area_level_1;
-                document.getElementById("address2").value = locality+ " " +sublocality_level_1;
+                document.getElementById("address2").value = sublocality_level_1
+              ? locality + " " + sublocality_level_1
+              : locality;
+
                 document.getElementById("address3").value = sublocality_level_2;
 
               } else {

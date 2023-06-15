@@ -4,19 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Document</title>
 </head>
 <body>
+    <h1>どっちの森田Tシャツを買いますか？</h1>
     <form action="/create-checkout-session" method="post">
-        <p>50円の森田Tシャツ</p>
-        <button type="submit">Checkout</button>
+        <p>50円の森田Tシャツ😎</p>
+        <button  class="buyButton" type="submit">購入する</button>
     </form>
     <form action="/create-checkout-session2" method="post">
-        <p>2000円の森田Tシャツ</p>
-        <button type="submit">Checkout</button>
+        <p>2000円の森田Tシャツ🤗</p>
+        <button class="buyButton" type="submit">購入する</button>
     </form>
 
+    <div class="back-btn">
+    <button onclick="location.href='index.html'">戻る</button>
+    </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+            $(".buyButton").click(function(event){
+                event.preventDefault();  // avoid form submission
+                alert("外部サイトに移動します");
+                $(this).parent().submit();  // submit the form manually after the alert
+                //クレカ番号は4242 4242 4242 4242 
+            });
+        </script>
+        
 
 </body>
 </html>

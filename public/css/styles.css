@@ -7,11 +7,22 @@ body{
 
 form {
     margin: 0 auto;  /* 上下のマージンは0、左右のマージンは自動 */
-    width: 75%;  /* formの幅を指定します。ここではページ全体の50%を指定していますが、必要に応じて適切な値に変更してください */
+    width: 50%;  /* formの幅を指定します。ここではページ全体の50%を指定していますが、必要に応じて適切な値に変更してください */
 }
 
 .zipcode-cell {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+#centerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.back-btn{
+    padding-top: 20px;
 }

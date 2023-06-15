@@ -1,5 +1,4 @@
 firebase.js
 
-index.js
-
-app.js
+keys/
+.env
